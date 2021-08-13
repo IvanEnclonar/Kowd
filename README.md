@@ -1,2 +1,2 @@
 # Kowd
-A webapp that teaches Filipino students how to code.
+A webapp that teaches Filipino students how to write HTML/CSS.
