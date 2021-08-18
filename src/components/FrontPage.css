@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap');
+.main {
+	background: #FDFEFF;
+	position: relative;
+	/*border: 1px solid;*/
+
+	font-family: Poppins, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	height: 100vh;
+	overflow: hidden;
+}
+nav {
+	background: #FDFEFF;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+}
+.nav-button {
+	display: flex;
+	flex-direction: row;
+	margin: 15px 60px;
+}
+.nav-button div {
+	margin: 0px 10px;
+	padding: 5px 25px;
+}
+.log-in {
+	background: #EE7752;
+	border-radius: 12px;
+	color: #FAFFE7 !important;
+	width: fit-content;
+}
+.panel-1 {
+	display: flex;
+	justify-content: space-around;
+	background: #00ABE7;
+}
+.two-column {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding-bottom: 90px;
+	padding-top: 143px;
+}
+.two-column img {
+	width: 430px;
+	height: 324px;
+	background: #FDFEFF;
+	margin: 0 30px;
+}
+.two-column-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 450px;
+	margin: 0 30px;
+}
+.two-column-text div {
+	color: #053B4B;
+	text-align: left;
+	margin: 16px 0px;
+}
+.heading {
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size: 34px;
+}
+.big-green {
+	color: #BEEDAA !important;
+	font-size: 63px;
+}
+.ages {
+	font-size: 23px;
+}
+.start-learning {
+	font-size: 26px;
+	padding: 15px 25px;
+}
+.giant-circle {
+	position: relative;
+	width: 1500vw;
+	height: 1500vw;
+	left: -680vw;
+	top: -70px;
+	border: 5 solid;
+	background: #FDFEFF;
+	border-radius: 750vw;
+}
