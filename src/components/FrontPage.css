@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@500;600&display=swap');
 .main {
 	background: #FDFEFF;
 	position: relative;
@@ -8,7 +8,6 @@
 	font-style: normal;
 	font-weight: 500;
 	font-size: 20px;
-	height: 100vh;
 	overflow: hidden;
 }
 nav {
@@ -45,6 +44,9 @@ nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	
+}
+.panel-1 .two-column {
 	padding-bottom: 90px;
 	padding-top: 143px;
 }
@@ -57,7 +59,7 @@ nav {
 .two-column-text {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	width: 450px;
 	margin: 0 30px;
 }
@@ -68,12 +70,13 @@ nav {
 }
 .heading {
 	font-family: Montserrat;
-	font-weight: bold;
+	font-weight: 500;
 	font-size: 34px;
 }
 .big-green {
 	color: #BEEDAA !important;
 	font-size: 63px;
+	font-weight: bold;
 }
 .ages {
 	font-size: 23px;
@@ -82,13 +85,73 @@ nav {
 	font-size: 26px;
 	padding: 15px 25px;
 }
-.giant-circle {
+/*.giant-circle {
 	position: relative;
 	width: 1500vw;
 	height: 1500vw;
 	left: -680vw;
-	top: -70px;
+	top: -700px;
 	border: 5 solid;
 	background: #FDFEFF;
 	border-radius: 750vw;
+}*/
+.panel-2 {
+	padding: 90px 0px;
+	color: #084C61;
+}
+.panel-2 .heading {
+	font-weight: 500;
+	font-size: 34px;
+}
+.three-column {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 40px 400px;
+	font-size: 23px;
+}
+.three-column div {
+	width: 300px;
+	font-weight: 600;
+}
+.three-column img {
+	width: 170px;
+	height: 170px;
+	border: 1px solid black;
+}
+.panel-3 {
+	padding: 40px 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.panel-3 .heading {
+	font-size: 26px;
+	color: #084C61;
+	margin-bottom: 35px;
+}
+.panel-3 .two-column {
+	font-size: 15px;
+}
+.panel-3 .two-column .heading {
+	font-family: Poppins, sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	color: black;
+	margin-bottom: 10px;
+}
+.panel-3 .two-column img {
+	width: 170px;
+	height: 170px;
+	border: 1px solid black;
+}
+.panel-3 .two-column .right-align,
+.panel-3 .two-column .left-align {
+	width: 600px;
+}
+.right-align {
+	text-align: right;
+}
+.left-align {
+	text-align: left;
 }
