@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap");
+
+.FrontPage__nav {
+  height: 10vh;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0% 1%;
+}
+.FrontPage__NavLinks {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.FrontPage__NavLogo {
+  width: 100px;
+  object-fit: contain;
+}
+.FrontPage__CommonButton {
+  background-color: #ee7752;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: #faffe7;
+  cursor: pointer;
+  font-size: 20px;
+}
+.FrontPage__Body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80vh;
+  background-color: #00abe7;
+}
+.FrontPage__MainImage {
+  width: 95%;
+}
+.FrontPage__MainImageDiv {
+  width: 48%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.FrontPage__MainTextDiv {
+  width: 52%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  justify-items: center;
+  align-items: flex-start;
+}
+.FrontPage__MainHeading {
+  font-size: 75px;
+  color: #beedaa;
+  margin-bottom: 5px;
+  margin-left: 60px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: left;
+}
+.FrontPage__SubHeading {
+  font-size: 22px;
+  width: 80%;
+  margin-bottom: 35px;
+  margin-left: 60px;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.FrontPage__StartLearning {
+  font-size: 25px;
+  margin-left: 60px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.FrontPage__IncludesDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #084c61;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+}
+.FrontPage__IncludesImages {
+  width: 275px;
+  display: grid;
+  place-items: center;
+}
+.FrontPage__SecondSectionHeading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 27px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  color: #084c61;
+}
+.FrontPage__HorizontalLine {
+  border-bottom: 2px solid #00abe7;
+  width: 80%;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.FrontPage__BottomImages {
+  width: 300px;
+}
+.FrontPage__TSDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.FrontPage__TSLabel {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+}
+.FrontPage__TSText {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+.FrontPage__TextAllignRight {
+  text-align: right;
+}
+.FrontPage__TextAllignLeft {
+  text-align: left;
+}
+.FrontPage__TSHeading {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  color: #084c61;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 27px;
+}
+
+/* Code for the wave part */
+.custom-shape-divider-top-1631618645 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.custom-shape-divider-top-1631618645 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 121px;
+  transform: rotateY(180deg);
+}
+.custom-shape-divider-top-1631618645 .shape-fill {
+  fill: #00abe7;
+}
