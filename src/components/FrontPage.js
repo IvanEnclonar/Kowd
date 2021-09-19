@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Login from "./Login.js";
 import "./FrontPage.css";
 
 function FrontPage(){
+    const [authModal, setAuthModal] = useState(false);
+    const [authLogin, setAuthLogin] = useState(false);
+
     return(
         <div>
+            {authModal && <Login type={authLogin} setType={setAuthLogin}setClose={() => {setAuthModal(false)}}/>}
             <nav className="FrontPage__nav">
                 <h2 className="FrontPage__NavLinks">Tutorials</h2>
                 <h2 className="FrontPage__NavLinks">Exercises</h2>
                 <img src="https://storage.googleapis.com/frontpage-images/Kowd-newLogo.png" className="FrontPage__NavLogo"></img>
                 <h2 className="FrontPage__NavLinks">About Us</h2>
-                <div className="FrontPage__CommonButton">Login</div>
+                <div className="FrontPage__CommonButton" onClick={() => { setAuthModal(!authModal) }}>Sign Up</div>
             </nav>
             <div className="FrontPage__Body">
                 <div className="FrontPage__MainImageDiv"><img className="FrontPage__MainImage" src="https://storage.googleapis.com/frontpage-images/Main-image.svg"></img></div>
