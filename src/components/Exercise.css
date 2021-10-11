@@ -1,0 +1,73 @@
+.Exercise__Main {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: 6;
+  display: grid;
+  place-items: center;
+}
+.Exercise__Mask {
+  background-color: rgba(0, 0, 0, 0.336);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 6;
+}
+.Exercise__Content {
+  background-color: white;
+  height: 520px;
+  width: 950px;
+  border-radius: 8px;
+  z-index: 7;
+  position: relative;
+}
+.Exercise__Close {
+  width: 30px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.Exercise__QuestionDiv {
+  width: 90%;
+  margin: 60px auto 0px auto;
+  text-align: left;
+  font-size: 18px;
+}
+.Exercise__MCDiv {
+  width: 80%;
+  margin: 40px auto 0px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.Exercise__MCItem {
+  padding: 10px 0px 10px 10px;
+  border: 1px solid rgb(231, 231, 231);
+  cursor: pointer;
+  font-size: 23px;
+  text-align: left;
+}
+.Exercise__MCItemCorrect {
+  padding: 10px 0px 10px 10px;
+  border: 1px solid rgb(231, 231, 231);
+  font-size: 23px;
+  text-align: left;
+  background-color: rgb(111, 223, 128);
+}
+.Exercise__MCItemWrong {
+  padding: 10px 0px 10px 10px;
+  border: 1px solid rgb(231, 231, 231);
+  font-size: 23px;
+  text-align: left;
+  background-color: rgb(245, 94, 94);
+}
+
+.Exercise__MCItem:hover {
+  background-color: rgb(240, 240, 240);
+}

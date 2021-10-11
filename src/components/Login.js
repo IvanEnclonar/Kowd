@@ -56,7 +56,7 @@ function Login({type, setType, setClose}){
                 </div>
                 <div className="Login__Footer">
                     <p className="Login__FText1">Already have an account?</p>
-                    <p className="Login__FText2" onClick={() => setType(true)}>Login</p>
+                    <p className="Login__FText2" onClick={() => setType(true)}>Log In</p>
                 </div>
             </div>
             <div className="Login__Mask" onClick={() => setClose()}></div>

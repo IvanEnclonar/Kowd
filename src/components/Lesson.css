@@ -1,0 +1,36 @@
+.L__Header {
+  margin: 10px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: grey;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.L__HeaderDiv {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.L__VideoDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.L__LessonTitle {
+  width: 85%;
+  margin: 0px auto 0px auto;
+  text-align: left;
+  font-size: 37px;
+}
+.L__ShowExerciseButton {
+  background-color: #ee7752;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #faffe7;
+  cursor: pointer;
+  font-size: 28px;
+  width: 150px;
+  margin: 30px auto 20px auto;
+}
