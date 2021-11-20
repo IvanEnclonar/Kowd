@@ -20,9 +20,11 @@
 }
 .L__LessonTitle {
   width: 85%;
-  margin: 0px auto 0px auto;
+  margin: 25px auto 25px auto;
   text-align: left;
-  font-size: 37px;
+  font-size: 35px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 .L__ShowExerciseButton {
   background-color: #ee7752;
@@ -33,4 +35,15 @@
   font-size: 28px;
   width: 150px;
   margin: 30px auto 20px auto;
+  font-family: "Montserrat", sans-serif;
+}
+.L__ContinueButton {
+  background-color: #ee7752;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #faffe7;
+  cursor: pointer;
+  font-size: 28px;
+  width: 150px;
+  margin: 60px auto 20px auto;
 }

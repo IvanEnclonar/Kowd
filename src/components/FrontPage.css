@@ -20,9 +20,11 @@
   background-color: #ee7752;
   border-radius: 5px;
   padding: 5px 10px;
+  margin-right: 10px;
   color: #faffe7;
   cursor: pointer;
   font-size: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 .FrontPage__Body {
   display: flex;
@@ -73,8 +75,9 @@
 .FrontPage__StartLearning {
   font-size: 25px;
   margin-left: 60px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  padding: 5px 10px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
 }
 .FrontPage__IncludesDiv {
   display: flex;

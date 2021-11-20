@@ -1,36 +1,86 @@
-import React, { useState } from 'react';
-import { NavBar } from './HomePage';
+import React, { useEffect, useState } from 'react';
+import NavBar from './NavBar.js';
 import "./Lesson.css";
 import ReactPlayer from 'react-player/lazy';
 import Exercises from './Exercise';
+import { firestore } from "../Firebase.js";
+import LoadingDiv from "../components/LoadingDiv.js";
+import { useAuth } from "../contexts/AuthContext.js";
+import firebase from "firebase/app";
+import { useHistory } from "react-router-dom";
 
 
-function Lesson(){
+function Lesson(props){
     const [openExercise, setOpenExercise] = useState(false)
+    const [lessonDoc, setLessonDoc] = useState({});
+    const [nextLessonDoc, setNextLessonDoc] = useState(null);
+    const { userData } = useAuth();
+    const history = useHistory()
+    
+    useEffect(() =>{
+        firestore.collection("Courses").doc("WNbIRH1JsXgZQhyD3kNQ").collection("Lessons").doc(props.match.params.id).get().then((doc) => {
+                setLessonDoc(doc.data());
+                firestore.collection("Courses").doc("WNbIRH1JsXgZQhyD3kNQ").collection("Lessons").where("order", "==", doc.data().order + 1).get().then((querySnapshot) => {
+                    querySnapshot.forEach((doc) => {
+                        console.log(doc.id, " => ", doc.data());
+                        setNextLessonDoc(doc.id);
+                    });
+                })
+                .catch((error) => {
+                    console.log("Error getting documents: ", error);
+                });
+            }).catch((error) => {
+                console.log("Error getting document:", error);
+        });
 
-    return(
+    }, []);
+
+
+    const next = () =>{
+        if(userData.Courses.WNbIRH1JsXgZQhyD3kNQ.nextLesson === lessonDoc.order){
+            var nextLesson = lessonDoc.order + 1;
+            firestore.collection("Users").doc(userData.uid).update({
+                "Courses.WNbIRH1JsXgZQhyD3kNQ.completed": firebase.firestore.FieldValue.arrayUnion(props.match.params.id),
+                "Courses.WNbIRH1JsXgZQhyD3kNQ.nextLesson": nextLesson,
+                "Courses.WNbIRH1JsXgZQhyD3kNQ.nextLessonID": nextLessonDoc,
+            }).then(() => {
+                if(nextLessonDoc === null){
+                    history.push("/")
+                    window.location.reload(false);
+                }
+                else{
+                    history.push("/lesson/" + nextLessonDoc);
+                    window.location.reload(false);
+                }
+            })
+        }
+        else{
+            if(nextLessonDoc === null){
+                history.push("/")
+                window.location.reload(false);
+            }
+            else{ 
+                history.push("/lesson/" + nextLessonDoc);
+                window.location.reload(false);
+            }
+        }
+    }
+    
+    if(lessonDoc) return(
         <div>
-            <NavBar />
+            <NavBar use="lesson" />
             <div>
-                <div className="L__Header">
-                    <div className="L__HeaderDiv">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="grey"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
-                        Previous
-                    </div>
-                    <div className="L__HeaderDiv">
-                        Next
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="grey"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>
-                    </div>
-                </div>
-                <h1 className="L__LessonTitle">Lesson Title</h1>
+                <h1 className="L__LessonTitle">{lessonDoc.name}</h1>
                 <div className="L__VideoDiv">
-                    <ReactPlayer url="https://www.youtube.com/watch?v=biYgq4L7u-Y&ab_channel=Kaemi" controls="true" width="900px" height="507px" />
+                    <ReactPlayer url={lessonDoc.url} controls="true" width="900px" height="507px" />
                 </div>
-                <div className="L__ShowExerciseButton" onClick={() =>{ setOpenExercise(!openExercise)}}>Exercises</div>
+                {lessonDoc.questions ? <div className="L__ShowExerciseButton" onClick={() => { setOpenExercise(!openExercise)}}>Exercises</div> : <div className="L__ShowExerciseButton" onClick={() => { next()}}>Next Lesson</div>}
             </div>
-            {openExercise && <Exercises open={openExercise} setOpen={setOpenExercise}/>}
+            {openExercise && <Exercises open={openExercise} next={next} setOpen={setOpenExercise} questions={lessonDoc.questions}/>}
+                
         </div>
     );
+    else return(<LoadingDiv />);
 }
 
 export default Lesson;

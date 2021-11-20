@@ -1,30 +1,26 @@
 import React, { useState } from 'react';
 import Login from "./Login.js";
 import "./FrontPage.css";
+import Footer from "./Footer.js";
+import NavBar from './NavBar.js';
+import { Link } from 'react-router-dom';
+
+
 
 function FrontPage(){
-    const [authModal, setAuthModal] = useState(false);
-    const [authLogin, setAuthLogin] = useState(false);
 
     return(
         <div>
-            {authModal && <Login type={authLogin} setType={setAuthLogin}setClose={() => {setAuthModal(false)}}/>}
-            <nav className="FrontPage__nav">
-                <h2 className="FrontPage__NavLinks">Tutorials</h2>
-                <h2 className="FrontPage__NavLinks">Exercises</h2>
-                <img src="https://storage.googleapis.com/frontpage-images/Kowd-newLogo.png" className="FrontPage__NavLogo"></img>
-                <h2 className="FrontPage__NavLinks">About Us</h2>
-                <div className="FrontPage__CommonButton" onClick={() => { setAuthModal(!authModal) }}>Sign Up</div>
-            </nav>
+            <NavBar />
             <div className="FrontPage__Body">
                 <div className="FrontPage__MainImageDiv"><img className="FrontPage__MainImage" src="https://storage.googleapis.com/frontpage-images/Main-image.svg"></img></div>
                 <div className="FrontPage__MainTextDiv">
                     <div className="FrontPage__MainHeading">CODING FOR FILIPINOS</div>
-                    <div className="FrontPage__SubHeading">Access free and kid-fiendly coding resources in Filipino! Ages 8-15</div>
-                    <div className="FrontPage__CommonButton FrontPage__StartLearning">Start Learning</div>
+                    <div className="FrontPage__SubHeading">Access free and student-friendly coding resources in Filipino! Ages 13+</div>
+                    <Link to="/" className="FrontPage__CommonButton FrontPage__StartLearning">Start Learning!</Link>
                 </div>
             </div>
-            <div class="custom-shape-divider-top-1631618645">
+            <div className="custom-shape-divider-top-1631618645">
                     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                         <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
                     </svg>
@@ -71,6 +67,7 @@ function FrontPage(){
                     <img className="FrontPage__BottomImages" src="https://storage.googleapis.com/frontpage-images/learning.png"></img>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

@@ -3,33 +3,63 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 2px solid #beedaa;
+}
+.HP__NavDash {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .HP__NavLeftDiv {
   display: flex;
   align-items: center;
   margin-left: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 .HP__NavHome {
   font-size: 22px;
   margin-left: 15px;
   cursor: pointer;
+  color: black;
+  text-decoration: none;
 }
 .HP__NavProfile {
-  border: 1px solid black;
   height: 30px;
   width: 30px;
   border-radius: 100%;
   margin-right: 10px;
+  background-color: rgb(97, 186, 238);
+  cursor: pointer;
+  padding: 4px;
 }
 .HP__FirstDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 70vh;
+  background-color: #00abe7;
+}
+.custom-shape-divider-top-1635401840 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 .HP__MainText {
   font-size: 65px;
   margin-bottom: 15px;
+  color: rgb(235, 235, 235);
+  font-family: "Montserrat", sans-serif;
+}
+.HP__SubText {
+  width: 60%;
+  font-size: 17px;
+  color: rgb(235, 235, 235);
+  margin: 0px auto;
+  font-family: "Poppins", sans-serif;
 }
 .HP__Progbar {
   width: 500px;
@@ -40,11 +70,12 @@
 .HP__Proceed {
   background-color: #ee7752;
   border-radius: 5px;
-  padding: 4px 22px;
+  padding: 4px 30px;
   color: #faffe7;
   cursor: pointer;
   font-size: 29px;
-  margin-top: 120px;
+  margin-top: 80px;
+  font-family: "Montserrat", sans-serif;
 }
 .HP__ProceedContainer {
   width: 110px;
@@ -54,12 +85,14 @@
   border: 1px solid rgba(255, 255, 255, 0);
   position: relative;
   height: 50vh;
+  margin-bottom: 150px;
 }
 .HP__CoursesText {
   position: absolute;
   left: 45px;
-  top: 10px;
-  font-size: 35px;
+  top: 20px;
+  font-size: 33px;
+  font-family: "Montserrat", sans-serif;
 }
 .HP__CoursesContainer {
   border: 2px solid rgb(90, 90, 90);
@@ -79,8 +112,9 @@
   margin: 3px 0px 0px 10px;
 }
 .HP__CourseTitle {
-  font-size: 30px;
+  font-size: 27px;
   margin: 0px 0px 0px 20px;
+  font-family: "Poppins", sans-serif;
 }
 .HP__OpenDropdown {
   width: 75%;
@@ -88,16 +122,79 @@
   margin-right: auto;
   margin-top: 5px;
 }
+.HP__DropDownLoading {
+  height: 100px;
+  display: grid;
+  place-items: center;
+}
 .HP__DropdownItem {
   font-size: 22px;
   padding: 4px 0px 4px 40px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", sans-serif;
 }
 .HP__DropdownItemIcon {
   margin-right: 10px;
 }
 .HP__DropdownItem:hover {
   background-color: rgb(235, 235, 235);
+}
+.HP__DropdownItemLocked {
+  font-size: 22px;
+  padding: 4px 0px 4px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: rgb(141, 141, 141);
+  font-family: "Poppins", sans-serif;
+}
+
+.Prof__MainDiv {
+  position: absolute;
+  right: 10px;
+  top: 36px;
+  height: 165px;
+  width: 220px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+
+  z-index: 21;
+}
+.Prof__ProfPicDiv {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: rgb(97, 186, 238);
+  padding: 10px;
+  margin: 10px auto 5px auto;
+}
+.Prof__Email {
+  width: 100%;
+  margin-top: 0px;
+  font-size: 15px;
+}
+.Prof__Logout {
+  margin: 10px auto 0px auto;
+  width: 170px;
+  border-radius: 5px;
+  padding: 3px 0px;
+  cursor: pointer;
+  color: red;
+}
+.Prof__Logout:hover {
+  background-color: rgb(230, 230, 230);
+}
+.Prof__Mask {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 20;
 }
