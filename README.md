@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Kowd
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built using firebase and React. Check out https://kowd.dev/frontpage
 
 ## Available Scripts
 
