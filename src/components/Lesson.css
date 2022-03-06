@@ -1,3 +1,33 @@
+.L__Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 32px;
+}
+.L__BackArrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  float: left;
+  margin: 10px 0 30px 30px;
+}
+.arrow {
+  height: 30px;
+  margin-right: 15px;
+}
+.L_BackArrowText {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+}
+.L__Main {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .L__Header {
   margin: 10px 0px 0px 0px;
   display: flex;
@@ -18,13 +48,182 @@
   align-items: center;
   justify-content: center;
 }
+.L__CourseProgress {
+  display: flex;
+  height: 30px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px 20px 15px;
+  background-color: #FAFAFA;
+  border: 1px solid #606060;
+  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
+  margin-right: 24px;
+}
+.L__CourseProgressTitle {
+  font-weight: 100;
+  color: #404040;
+  font-size: 19px;
+  margin-right: 20px;
+}
+.L__CourseProgressPercent {
+  font-weight: 500;
+  font-size: 29px;
+  color: #00ABE7;
+}
+.L__Desc {
+  margin: 5px 0 10px 0;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #404040;
+}
+.L__ParticipantList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.L__ParticipantLabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  margin: 0 20px 0 30px;
+  padding: 0;
+  text-align: top;
+}
+.L__ProfileContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+.L__ParticipantProfile {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px 0 1px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.L__ParticipantName {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  margin: 0 40px 0 5px;
+  text-align: top;
+}
+.L__CheckTemplate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0 20px 30px;
+}
+.L__CheckHL {
+  background-color: #00ABE7;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+.L__Check {
+  border-bottom: 1px solid #AEAEAE;
+}
+.L__CheckLabelTemplate {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.L__CheckLabelHL {
+  color: #FFFFFF;
+}
+.L__CheckLabel {
+  color: #808080;
+}
+.L__CheckboxTemplate{
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 3px solid white;
+} 
+.L__CheckboxTemplate:checked {
+  border: 0;
+  background-color: white;
+  color: #00ABE7;
+}
+.L__CheckboxTemplate:checked:after {
+  content: '\2714';
+  margin-left: 3px;
+  font-size: 18px;
+}
+.L__CheckboxHL {
+  border: 3px solid white;
+}
+.L__CheckboxHL:checked {
+  background-color: white;
+  color: #00ABE7;
+}
+.L__Checkbox {
+  border: 3px solid #00ABE7;
+}
+.L__Checkbox:checked {
+  background-color: #00ABE7;
+  color: white
+}
+.L__ChecklistContainer {
+  border-radius: 10px;
+  border: 1px solid #606060;
+  background-color: #FAFAFA;
+  padding: 20px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 50px;
+}
+.L__SocMed {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+}
+.L__SocMedLabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 25px;
+}
+.L__SocMedIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  background-color: #DADADA;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.L__Twitter {
+  background-color: #1DA1F2;
+  color: #F5F8FA;
+}
+.L__FB {
+  background-color: #4267B2;
+  color: white;
+}
+.L__Insta {
+  background: linear-gradient(164.29deg, rgba(5, 10, 230, 0) -1.66%, #5851D8 13.17%, #833AB4 27.05%, #C13584 39.01%, #E1306C 52.41%, #FD244C 65.81%, #F77737 78.25%, #FFDC80 90.22%);
+  color: white;
+}
 .L__LessonTitle {
   width: 85%;
-  margin: 25px auto 25px auto;
+  margin: 15px auto 25px 0;
   text-align: left;
   font-size: 35px;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
 }
 .L__ShowExerciseButton {
   background-color: #ee7752;
