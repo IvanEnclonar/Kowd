@@ -1,10 +1,16 @@
 .HP__Nav {
   height: 8vh;
+  padding: 1vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #00ABE7;
+  color: #F5F5F5;
   border-bottom: 2px solid #beedaa;
+  box-shadow: 0 4px 8px;
 }
+
+
 .HP__NavDash {
   height: 8vh;
   display: flex;
@@ -18,10 +24,10 @@
   font-family: "Montserrat", sans-serif;
 }
 .HP__NavHome {
-  font-size: 22px;
-  margin-left: 15px;
+  font-size: 20px;
+  margin-left: 20px;
   cursor: pointer;
-  color: black;
+  color: #F5F5F5;
   text-decoration: none;
 }
 .HP__NavProfile {

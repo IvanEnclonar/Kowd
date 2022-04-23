@@ -4,6 +4,15 @@ import { useAuth } from "../contexts/AuthContext.js";
 import { Link, useHistory } from "react-router-dom";
 import Login from "./Login.js";
 
+function LessonNavLinks() { 
+  return(
+    <div>
+      <Link to="/" className="HP__NavHome">Home</Link>
+      <Link to="/" className="HP__NavHome">About</Link>
+    </div>
+  )
+}
+
 
 function NavBar({use}){
     const { currentUser, logout } = useAuth();
@@ -20,14 +29,15 @@ function NavBar({use}){
             alert(e.message);
         })
     }
-    
+
     return(
         <>
         {authModal && <Login type={authLogin} setType={setAuthLogin}setClose={() => {setAuthModal(false)}}/>}
         <nav className={use=="lesson" ? "HP__Nav" : "HP__NavDash"}>
             <div className="HP__NavLeftDiv"> 
                 <img src="https://storage.googleapis.com/frontpage-images/Kowd-newLogo.png" className="FrontPage__NavLogo"></img>
-                {use==="lesson" && <Link to="/" className="HP__NavHome">Home</Link>} 
+                {use==="lesson" && <LessonNavLinks />} 
+                <lessonNav />
             </div>
             {currentUser && <div className="HP__NavProfile" onClick={() =>{ setOpenProf(!openProf)}}>
                 <img src={"https://avatars.dicebear.com/api/bottts/" + currentUser.email.slice(0,6) + ".svg"} />
